@@ -11,12 +11,10 @@ $_SERVER['REQUEST_METHOD'] == "POST" && !empty($_REQUEST["name"]) &&
     "NAME" => trim($_REQUEST['name']),
     "PASSWORD" => trim($_REQUEST['pass']),
     "CONFIRM_PASSWORD" => trim($_REQUEST['confPass'])
-
-
   );
   $id = $use->Add($userInf);
   if(intval($id) > 0){
-    echo "Вы успешно зарегестрированы"ж
+    echo "Вы успешно зарегестрированы";
   } else {
     echo $user->LAST_ERROR;
   }
