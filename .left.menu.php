@@ -2,25 +2,31 @@
 $aMenuLinks = Array(
 	Array(
 		"Написать в блог", 
-		SITE_DIR."edit/new/", 
+		"edit/new/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Черновики", 
-		SITE_DIR."draft/", 
+		"draft/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Загрузить фото", 
-		SITE_DIR."photo/0/action/upload/", 
+		"photo/0/action/upload/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
-
+	Array(
+		"Новая страница", 
+		"/registrationTryout.php", 
+		Array(), 
+		Array(), 
+		"" 
+	)
 );
 ?>
