@@ -1,12 +1,12 @@
 <?php
-
+echo PHP_SAPI;
 if (PHP_SAPI != 'cli')
   die();
 
   @set_time_limit(0);
   @ignore_user_abort(true);
 
-  $_SERVER["DOCUMENT_ROOT"] = realpath(__DIR__ . '/../../../../');
+  $_SERVER["DOCUMENT_ROOT"] = realpath(__DIR__ . '/../../');
   $DOCUMENT_ROOT = $_SERVER["DOCUMENT_ROOT"];
 
   // Если инициализировать данную константу каким либо значением, то это запретит сбор статистики на данной странице.
@@ -36,7 +36,8 @@ if (PHP_SAPI != 'cli')
           'ru'=>Array(
             'NAME'=>'вакансии'
           )
-      );
+      )
+    );
   $obBlocktype = new CIBlockType;
   $DB->StartTransaction();
   $res = $obBlocktype->Add($arFields);
@@ -118,7 +119,7 @@ if (PHP_SAPI != 'cli')
 //-------------------------------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------------------------------
-//добавление свойств в инфоблок Вакансии
+//добавление свойств в инфоблок работодатель
   $arFields = Array(
     "NAME" => "Название",
     "ACTIVE" => "Y",
@@ -255,7 +256,7 @@ $arFields = Array(
   "SORT" => "50",
   "CODE" => "SPECIAL",
   "PROPERTY_TYPE" => "F",
-  "IS_REQUIRED" => "Y",
+  "IS_REQUIRED" => "N",
   "IBLOCK_ID" => $IDvacancy,//номер вашего инфоблока
   "LIST_TYPE" => "L",
   "MULTIPLE" => "N"
